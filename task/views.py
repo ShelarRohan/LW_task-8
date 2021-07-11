@@ -71,9 +71,9 @@ def get(request):
         return b, []
     roi = " "
     for (x, y, w, h) in faces:
-            cv2.rectangle(b, (x, y), (x+w, y+h), (0, 255, 255), 2)
-            roi = b[y:y+h, x:x+w]
-            roi = cv2.resize(roi, (400, 150))
+        cv2.rectangle(b, (x, y), (x+w, y+h), (0, 255, 255), 2)
+        roi = b[y:y+h, x:x+w]
+        roi = cv2.resize(roi, (400, 150))
 
     cv2.imshow('ImageWindow1', roi)
     cv2.waitKey()
@@ -83,7 +83,7 @@ def get(request):
     print(text)
     text=text.replace(' ','')
     text = text[:-2] 
-    p= "http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=rbbr"
+    p= "http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={}&username=rrr"
     print(p.format(text))
     r=requests.get(p.format(text))
     data=xmltodict.parse(r.content)
