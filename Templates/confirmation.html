@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task -8</title>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+   
+    <!--===============================================================================================-->
+</head>
+<style>
+        #vh{
+          margin-top: 24px;   
+        font-size: 35px;
+        font-weight: bold;
+        font-family: Arial;
+        color: rgb(3, 3, 3);
+        
+        font-weight: bold;
+        font-family: monospace;
+       
+        }
+
+        .im{
+          margin-top: -74px;
+          margin-left: auto;
+          margin-right: auto;
+          box-shadow: 10px 10px 5px grey;
+        }
+</style>
+<body>
+
+    <div class="contact1">
+        <div class="container-contact1">
+            <div class="im">
+                <img src={{car.image.url}} height="300px" width="300px" alt="img" class="img-fluid">
+             </a>
+           </div>
+          <span class="contact1-form-title" id="vh">
+					 Hello "{{ car.Name }}" , Vehicle image successfully uploaded!!
+        </span>
+            
+        <button type="button" class="btn btn-danger" onclick="location.href='/index'">Home</button>
+        <button type="button" class="btn btn-success" onclick="location.href='/getinfo'">Get More Information</button>
+              
+        </div>
+    </div>
+
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+   
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  CENTER{
+    margin-top: 20px;
+  }
+  .container{
+    margin-top: 100px;
+  }
+  button, input, select, textarea {
+    margin: 10px;
+  }
+</style>
+<body>
+  
+<CENTER>
+
+  <div class="c">
+  
+    <h1 class="display-2">Hello "{{ car.Name }}"</h1>
+    
+    <div class="im">
+         <img src={{car.image.url}} height="200px" width="200px" alt="img" class="img-fluid">
+      </a>
+    </div>  
+  </div>
+  <button type="button" class="button" onclick="location.href='/index'">Home</button>
+  <button type="button" class="button" onclick="location.href='/getinfo'">Get More</button>
+  </CENTER>
+  
+</body>
+</html>
+
+
+
+
+
+
+ -->

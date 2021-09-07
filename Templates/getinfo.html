@@ -1,0 +1,112 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/getinfo.css' %}">
+   
+    <title>Task -8</title>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="container">
+            <h2 class="mb-5">Your Vehicle Information is here !</h2>
+            <h3 class="mb-5">Vehicle Number :- {{text}}</h3>
+            <div class="table-responsive">
+
+                <table class="table table-striped custom-table">
+                   
+                    <tbody>
+                        <thead>
+                            <td> Parameter </td>
+                            <td> Value </td>
+                          </thead>  
+
+                        <tr scope="row">
+                            <td>Registration Year </td>
+                            <td><a href="#">{{ RegistrationYear}}</a></td>
+                        </tr>
+
+                        <tr>
+                            <td> CarMake </td>
+                            <td><a href="#">{{CarMake}}</a></td>
+                        </tr>
+                        <tr>
+
+                            <td>Car Model</td>
+                            <td><a href="#">{{ CarModel }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Owner</td>
+                            <td><a href="#">{{Owner}}</a></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Insurance</td>
+                            <td><a href="#">{{ Insurance }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Location</td>
+                            <td><a href="#">{{ Location }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Registration Date</td>
+                            <td><a href="#">{{ RegistrationDate }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Engine Number</td>
+                            <td><a href="#">{{ EngineNumber }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Vechile Identification Number</td>
+                            <td><a href="#">{{ VechileIdentificationNumber }}</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>ImageUrl</td>
+                            <td><a href="#"> {{ ImageUrl }}</a></td>
+
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <button type="button" class="btn btn-danger" onclick="location.href='/index'">Home</button>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task - 8</title>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+     <!--===============================================================================================-->
+</head>
+<style>
+        #vh{
+               
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Arial;
+        color: rgb(135, 206, 250);
+        text-shadow: 3px 6px black;
+        font-weight: bold;
+        font-family: monospace;
+        text-shadow: 1px 3px darkblue;
+        }
+</style>
+<body>
+
+    <div class="contact1">
+        <div class="container-contact1">
+            <div class="contact1-pic " data-tilt>
+                <img src="{% static 'img/bg.png' %}" alt="IMG">
+            </div>
+
+            <form id ="form" class="contact1-form validate-form" method="POST" enctype="multipart/form-data">
+    
+                {% csrf_token %}
+            
+                <span class="contact1-form-title" id="vh">
+					Vehicle Information
+				</span>
+
+                <div class="wrap-input1 validate-input">
+                    {{ form.Name }}
+                   
+                    <span class="shadow-input1"></span>
+                </div>
+                <br>
+                <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    {{ form.image }}    
+                </div>
+
+               <div class="container-contact1-form-btn">
+                     <input type="submit" class="btn btn-primary btn-lg" name="submit">
+               </div>
+            </form>
+        </div>
+    </div>
+   
+</body>
+
+</html>
